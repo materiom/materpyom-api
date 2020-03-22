@@ -30,3 +30,15 @@ class TestAPI:
 
         assert response.status_code == 200
 
+    def test_sandbox_search(self, api_client):
+
+        response = api_client.get(f"/sandbox/search")
+
+        assert response.status_code == 200
+
+    def test_sandbox_id(self, api_client):
+
+        response = api_client.get(f"/sandbox/7fed6dcd3e95531fecb3")
+
+        assert response.status_code == 200
+
